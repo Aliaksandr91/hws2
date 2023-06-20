@@ -3,7 +3,7 @@ import s from './FriendMessage.module.css'
 
 // создать тип вместо any и отобразить приходящие данные
 const FriendMessage = (props: any) => {
-    
+
     return (
         <div
             id={'hw1-friend-message-' + props.message.id}
