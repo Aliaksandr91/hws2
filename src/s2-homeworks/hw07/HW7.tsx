@@ -32,7 +32,7 @@ const HW7 = () => {
                             id={'hw7-super-select'}
                             options={arr}
                             value={value}
-                            onChangeOption={onChangeOption}
+                            onChangeOption={(option) => onChangeOption(option.id)}
                         />
                     </div>
                     <div>
@@ -41,7 +41,7 @@ const HW7 = () => {
                             name={'hw7-radio'}
                             options={arr}
                             value={value}
-                            onChangeOption={onChangeOption}
+                            onChangeOption={(option) => onChangeOption(option.id)}
                         />
                     </div>
                 </div>
