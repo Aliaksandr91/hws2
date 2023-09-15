@@ -1,23 +1,48 @@
 .item {
+    height: 48px;
+    margin-left: 17px;
 }
-
+.item td {
+    padding-left: 17px;
+}
 .item:last-of-type {
 }
 
 .users {
+    min-width: 606px;
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
 }
 
 .buttonsContainer {
+    width: 606px;
+    padding-bottom: 17px;
+    display: flex;
+    justify-content: end;
+    grid-gap:10px
 }
 
 .container {
+
 }
 
 .thead {
+    height: 36px;
+    background: #E5E5E5;
+
+}
+.thead td {
+    font-weight: 600;
+    padding-left: 17px;
 }
 
 .nameCol {
+    font-weight: 300;
 }
 
 .ageCol {
+    font-weight: 600;
 }
