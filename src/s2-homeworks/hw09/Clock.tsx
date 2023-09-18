@@ -44,10 +44,10 @@ function Clock() {
     // // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     // const stringDay = 'date->day' || <br/> // пишут студенты
     // const stringMonth = 'date->month' || <br/> // пишут студенты
-    const stringTime = date.toLocaleTimeString();
-    const stringDate = date.toLocaleDateString();
-    const stringDay = date.toLocaleDateString('ru-Ru', { weekday: 'long' });
-    const stringMonth = date.toLocaleDateString('ru-Ru', { month: 'long' });
+    const stringTime = date.toLocaleTimeString('ru-Ru');
+    const stringDate = date.toLocaleDateString('ru-Ru');
+    const stringDay = date.toLocaleDateString('en-US', { weekday: 'long' });
+    const stringMonth = date.toLocaleDateString('en-US', { month: 'long' });
 
     return (
         <div className={s.clock}>
