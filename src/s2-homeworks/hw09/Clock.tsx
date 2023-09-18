@@ -46,8 +46,8 @@ function Clock() {
     // const stringMonth = 'date->month' || <br/> // пишут студенты
     const stringTime = date.toLocaleTimeString();
     const stringDate = date.toLocaleDateString();
-    const stringDay = date.toLocaleDateString('en-US', { weekday: 'long' });
-    const stringMonth = date.toLocaleDateString('en-US', { month: 'long' });
+    const stringDay = date.toLocaleDateString('ru-Ru', { weekday: 'long' });
+    const stringMonth = date.toLocaleDateString('ru-Ru', { month: 'long' });
 
     return (
         <div className={s.clock}>
