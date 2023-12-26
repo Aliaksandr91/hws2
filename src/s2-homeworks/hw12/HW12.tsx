@@ -18,13 +18,18 @@ const themes = [
     {id: 3, value: 'dark'},
 ]
 
-const HW12 = () => {
-        // взять ид темы из редакса
-    const themeId = useSelector<number>((state) => state)
-    const dispatch = useDispatch()
-    const change = (id: React.ChangeEvent<HTMLSelectElement>) => {
+type ChangeType = {
+    id: number
+    value: 'light' | 'blue' |'dark'
+}
 
-        dispatch(changeThemeId(+id.currentTarget.value));
+const HW12 = () => {
+    // взять ид темы из редакса
+    const themeId = useSelector((state: { theme: { themeId: number } }) => state.theme.themeId);
+    console.log(themeId)
+    const dispatch = useDispatch()
+    const change = (obj: ChangeType) => {
+        dispatch(changeThemeId(obj.id));
     }
 
     useEffect(() => {
@@ -42,8 +47,9 @@ const HW12 = () => {
                     id={'hw12-select-theme'}
                     className={s.select}
                     // сделать переключение тем
+                    value={themeId}
                     options={themes}
-                    onChange={change}
+                    onChangeOption={change}
                 />
             </div>
         </div>
