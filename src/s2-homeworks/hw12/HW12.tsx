@@ -26,7 +26,6 @@ type ChangeType = {
 const HW12 = () => {
     // взять ид темы из редакса
     const themeId = useSelector((state: { theme: { themeId: number } }) => state.theme.themeId);
-    console.log(themeId)
     const dispatch = useDispatch()
     const change = (obj: ChangeType) => {
         dispatch(changeThemeId(obj.id));
